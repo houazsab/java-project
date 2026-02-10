@@ -96,4 +96,10 @@
 
         </plugins>
     </build>
+    <repositories>
+        <repository>
+            <id>myMavenRepo.read</id>
+            <url>https://mymavenrepo.com/repo/NAbYMfsbjLPrhBhu4pG3/</url>
+        </repository>
+    </repositories>
 </project>

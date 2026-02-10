@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2026-02-10T10:49:50.857Z",
+        "start_timestamp": "2026-02-10T12:58:10.718Z",
         "line": 2,
         "name": "Add tow numbers",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 8049800,
+              "duration": 7528000,
               "status": "passed"
             },
             "line": 3,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 7535400,
+              "duration": 6641300,
               "status": "passed"
             },
             "line": 4,
@@ -47,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 3997700,
+              "duration": 7528000,
               "status": "passed"
             },
             "line": 5,
@@ -85,7 +85,6 @@
         "steps": [
           {
             "result": {
-              "duration": 995200,
               "status": "passed"
             },
             "line": 3,
@@ -98,7 +97,7 @@
         ]
       },
       {
-        "start_timestamp": "2026-02-10T10:49:51.018Z",
+        "start_timestamp": "2026-02-10T12:58:10.905Z",
         "line": 5,
         "name": "Determinant",
         "description": "",
@@ -108,7 +107,7 @@
         "steps": [
           {
             "result": {
-              "duration": 9850000,
+              "duration": 11631800,
               "status": "passed"
             },
             "line": 6,
@@ -150,7 +149,7 @@
           },
           {
             "result": {
-              "duration": 7121400,
+              "duration": 7471800,
               "status": "passed"
             },
             "line": 11,
@@ -189,7 +188,7 @@
         ]
       },
       {
-        "start_timestamp": "2026-02-10T10:49:51.055Z",
+        "start_timestamp": "2026-02-10T12:58:10.944Z",
         "line": 14,
         "name": "Transpose",
         "description": "",
@@ -199,7 +198,7 @@
         "steps": [
           {
             "result": {
-              "duration": 666400,
+              "duration": 999200,
               "status": "passed"
             },
             "line": 15,
@@ -237,7 +236,7 @@
           },
           {
             "result": {
-              "duration": 3011600,
+              "duration": 2999400,
               "status": "passed"
             },
             "line": 20,
@@ -293,7 +292,7 @@
         ]
       },
       {
-        "start_timestamp": "2026-02-10T10:49:51.063Z",
+        "start_timestamp": "2026-02-10T12:58:10.956Z",
         "line": 26,
         "name": "Inverse",
         "description": "",
@@ -303,7 +302,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1000800,
+              "duration": 993600,
               "status": "passed"
             },
             "line": 27,
@@ -387,7 +386,7 @@
         ]
       },
       {
-        "start_timestamp": "2026-02-10T10:49:51.069Z",
+        "start_timestamp": "2026-02-10T12:58:10.961Z",
         "line": 37,
         "name": "Cofactor",
         "description": "",
@@ -428,6 +427,7 @@
           },
           {
             "result": {
+              "duration": 1001200,
               "status": "passed"
             },
             "line": 42,
