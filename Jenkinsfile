@@ -5,9 +5,8 @@ pipeline{
                     steps {
                         bat 'mvn test'
                         junit 'target/surefire-reports /*.xml'
-                        cucumber
-                                        reportTitle: 'My report',
-                                        fileIncludePattern: 'target/example-report.json'
+                        cucumber reportTitle: 'My report',
+                                 fileIncludePattern: 'target/example-report.json'
 
                     }
         }
