@@ -17,7 +17,7 @@ pipeline{
         }
         stage('documentation'){
                     steps {
-                        bat './mvnw javadoc:javadoc'
+                        bat 'mvn javadoc:javadoc'
                         publishHTML ([
                          allowMissing: false,
                          alwaysLinkToLastBuild: true,
@@ -30,7 +30,7 @@ pipeline{
         }
         stage('build'){
                     steps {
-                        bat './mvnw package'
+                        bat 'mvn package'
                         archiveArtifacts 'target/*.jar'
                     }
         }

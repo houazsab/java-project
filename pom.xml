@@ -96,10 +96,10 @@
 
         </plugins>
     </build>
-    <repositories>
+    <distributionManagement>
         <repository>
-            <id>myMavenRepo.read</id>
+            <id>myMavenRepo.write</id>
             <url>https://mymavenrepo.com/repo/NAbYMfsbjLPrhBhu4pG3/</url>
         </repository>
-    </repositories>
+    </distributionManagement>
 </project>
