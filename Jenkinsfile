@@ -35,11 +35,12 @@ pipeline{
                     }
         }
         stage('deploy'){
-                      when{
+                     /* when{
                         branch 'master'
-                      }
+                      }*/
                       steps {
-                          bat 'docker-compose up --build -d'
+                          //bat 'docker-compose up --build -d'
+                          bat 'mvn deploy'
                       }
         }
     }
