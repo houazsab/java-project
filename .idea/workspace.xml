@@ -7,7 +7,6 @@
     <list default="true" id="1cc60e3f-c274-40d4-b3d7-0df2cc670b22" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1770718730473</updated>
       <workItem from="1770718731734" duration="7000" />
-      <workItem from="1770718844941" duration="2801000" />
+      <workItem from="1770718844941" duration="3317000" />
     </task>
     <servers />
   </component>
