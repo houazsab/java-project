@@ -46,12 +46,12 @@ pipeline{
         stage('notification') {
             parallel{
                 stage('slack') {
-                    steps {
-                         powershell """
-                         $payload = @{ text = "Hello, World!" } | ConvertTo-Json
-                         Invoke-RestMethod -Uri $env:slackwebhook -Method Post -ContentType "application/json" -Body $payload
-                         """
-                    }
+                   steps {
+                   powershell '''
+                   $payload = @{ text = "Build #$env:BUILD_NUMBER finished: $env:BUILD_STATUS" } | ConvertTo-Json
+                   Invoke-RestMethod -Uri $env:slackwebhook -Method Post -ContentType "application/json" -Body $payload
+                   '''
+                   }
                 }
                 stage('mail') {
                     steps {
