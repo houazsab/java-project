@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage('test'){
+        /*stage('test'){
                     steps {
                         bat 'mvn test'
                         junit 'target/surefire-reports/*.xml'
@@ -34,15 +34,15 @@ pipeline{
                         archiveArtifacts 'target/*.jar'
                     }
         }
-        stage('deploy'){
+        stage('deploy'){*/
                      /* when{
                         branch 'master'
                       }*/
-                     steps {
+                    // steps {
                           //bat 'docker-compose up --build -d'
-                          bat 'mvn deploy'
+                      /*    bat 'mvn deploy'
                       }
-        }
+        }*/
         stage('notification') {
             parallel{
                 stage('slack') {
@@ -66,12 +66,12 @@ pipeline{
         stage('release') {
                 steps {
                     bat """
-                    git tag -a v1.1 -m "%Version%"
-                           git push origin v1.1
+                    git tag -a v1.2 -m "%Version%"
+                           git push origin v1.2
                         """
 
                     withCredentials([string(credentialsId: 'github-token', variable: 'GITHUB_TOKEN')]) {
-                            bat """curl -X POST https://api.github.com/repos/Rania-ghachi/api-matrix/releases \
+                            bat """curl -X POST https://github.com/houazsab/java-project/releases \
                                      -H "Authorization: token %GITHUB_TOKEN%" \
                                      -H "Accept: application/vnd.github+json" \
                                      -H "Content-Type: application/json" \
