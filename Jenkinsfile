@@ -66,12 +66,12 @@ pipeline{
         stage('release') {
                 steps {
                     bat """
-                    git tag -a v1.2 -m "%Version%"
-                           git push origin v1.2
+                    git tag -a v1.3 -m "%Version%"
+                           git push origin v1.3
                         """
 
                     withCredentials([string(credentialsId: 'github-token', variable: 'GITHUB_TOKEN')]) {
-                            bat """curl -X POST https://github.com/houazsab/java-project/releases \
+                            bat """curl -X POST https://api.github.com/repos/houazsab/java-project/releases \
                                      -H "Authorization: token %GITHUB_TOKEN%" \
                                      -H "Accept: application/vnd.github+json" \
                                      -H "Content-Type: application/json" \
