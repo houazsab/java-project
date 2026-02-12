@@ -69,7 +69,6 @@ pipeline{
                     git tag -a v1.4 -m "%Version%"
                            git push origin v1.4
                         """
-
                     withCredentials([string(credentialsId: 'github-token', variable: 'GITHUB_TOKEN')]) {
                             bat """curl -X POST https://api.github.com/repos/houazsab/java-project/releases \
                                      -H "Authorization: token %GITHUB_TOKEN%" \
