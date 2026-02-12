@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage('test'){
+        /*stage('test'){
                     steps {
                         bat 'mvn test'
                         junit 'target/surefire-reports/*.xml'
@@ -34,14 +34,23 @@ pipeline{
                         archiveArtifacts 'target/*.jar'
                     }
         }
-        stage('deploy'){
+        stage('deploy'){*/
                      /* when{
                         branch 'master'
                       }*/
-                      steps {
+                    /* steps {
                           //bat 'docker-compose up --build -d'
                           bat 'mvn deploy'
                       }
+        }*/
+        stage('slack'){
+            steps {
+            bat ''' curl -s -X POST \
+            -H "Content-type: application/json" \
+            --data '{"text":"Deploying"}' \
+            "$slackwebhook"
+            }
         }
+
     }
 }
