@@ -50,7 +50,7 @@ pipeline{
                    powershell '''
                    $payload = @{ text = "Build #$env:BUILD_NUMBER finished: $env:BUILD_STATUS" } | ConvertTo-Json
                    Invoke-RestMethod -Uri $env:slackwebhook -Method Post -ContentType "application/json" -Body $payload
-                   '''
+                   ''' 
                    }
                 }
                 stage('mail') {
