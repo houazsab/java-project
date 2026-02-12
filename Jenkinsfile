@@ -64,9 +64,10 @@ pipeline{
             }
         }
         stage('release') {
-                steps { 
-                    bat"""git tag -a v1.0. -m "Release version 1.0"
-                           git push origin v1.0"""
+                steps {
+                    bat """git tag -a v1.0. -m "%Version%"
+                           git push origin v1.0
+                        """
 
                    /* bat """
                            curl -X POST https://api.github.com/repos/issadlounis/untitled/releases ^
