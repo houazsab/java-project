@@ -66,8 +66,8 @@ pipeline{
         stage('release') {
                 steps {
                     bat """
-                    git tag -a v1.3 -m "%Version%"
-                           git push origin v1.3
+                    git tag -a v1.4 -m "%Version%"
+                           git push origin v1.4
                         """
 
                     withCredentials([string(credentialsId: 'github-token', variable: 'GITHUB_TOKEN')]) {
