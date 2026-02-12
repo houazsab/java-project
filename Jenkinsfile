@@ -64,7 +64,6 @@ pipeline{
             }
         }
         stage('release') {
-            stage('slack') {
                 steps {
                     bat"""git tag -a v1.0. -m "Release version 1.0"
                            git push origin v1.0"""
@@ -77,7 +76,6 @@ pipeline{
                            -d "{\\"tag_name\\":\\"v%VERSION%\\",\\"name\\":\\"Release v%VERSION%\\",\\"body\\":\\"Production release\\",\\"draft\\":false,\\"prerelease\\":false}"
                         """
                 }
-            }
         }
     }
 }
