@@ -57,7 +57,7 @@ pipeline{
                     steps {
                          mail(subject: "Build réussi:",
                               body:"Le build a réussi.",
-                              to: "rina.ra.1804@gmail.com"
+                              to: "houazenesabrina@gmail.com"
                          )
                     }
                 }
