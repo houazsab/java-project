@@ -43,16 +43,25 @@ pipeline{
                           bat 'mvn deploy'
                       }
         }
-        stage('slack') {
-
-                 powershell """
-                 $payload = @{ text = "Hello, World!" } | ConvertTo-Json
-                 Invoke-RestMethod -Uri $env:slackwebhook -Method Post -ContentType "application/json" -Body $payload
-                 """
-
-                          }
-
+        stage('notification') {
+            parallel{
+                stage('slack') {
+                    steps {
+                         powershell """
+                         $payload = @{ text = "Hello, World!" } | ConvertTo-Json
+                         Invoke-RestMethod -Uri $env:slackwebhook -Method Post -ContentType "application/json" -Body $payload
+                         """
+                    }
                 }
-
+                stage('mail') {
+                    steps {
+                         mail(subject: "Build réussi:",
+                              body:"Le build a réussi.",
+                              to: "rina.ra.1804@gmail.com"
+                         )
+                    }
+                }
+            }
+        }
     }
 }
