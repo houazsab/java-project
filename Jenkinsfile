@@ -45,13 +45,10 @@ pipeline{
         }
         stage('slack') {
 
-                    steps {
-                        bat """
-                        curl.exe -X POST -H "Content-type: application/json"
-                        --data "{\\"text\\":\\"Hello, World!\\"}"
-                        "%slackwebhook%"
-                        """
-
+                 powershell """
+                 $payload = @{ text = "Hello, World!" } | ConvertTo-Json
+                 Invoke-RestMethod -Uri $env:slackwebhook -Method Post -ContentType "application/json" -Body $payload
+                 """
 
                           }
 
